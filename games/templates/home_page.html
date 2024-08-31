@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASR School</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #2c3e50;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+            color: white;
+        }
+        .image-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 1500px; 
+            max-height: 500px;
+            margin: 0 auto; 
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            width: 220px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            border: 2px solid #1abc9c;
+        }
+        .card h3 {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+        .card p {
+            color: #777;
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Masr School Management System</h1>
+</header>
+
+<nav>
+    <a href="{% url 'marksheet:marksheet' %}">Marksheet</a>
+    <a href="{% url 'games:award_winnerspage' %}">Games</a>
+    <a href="{% url 'attendence:student_attendance' %}">Attendance</a>
+    <a href="{% url 'user:login' %}">User</a>
+    <a href="{% url 'student_parent:Student' %}">Student</a>
+    <a href="{% url 'Fee:fees' %}">FEE</a>
+    <a href="{% url 'event:event' %}">Events</a>
+</nav>
+
+<div class="image-container">
+    <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="School Management System">
+</div>
+
+<div class="container">
+    <a href="{% url 'marksheet:marksheet' %}" class="card" id="marksheet">
+        <img src="https://img.icons8.com/ios-filled/100/1abc9c/document.png"  alt="Marksheet">
+        <h3>Marksheet</h3>
+        <p>View and manage student marksheets</p>
+    </a>
+    <a href="{% url 'games:award_winnerspage' %}" class="card" id="games">
+        <img src="https://img.icons8.com/ios-filled/100/1abc9c/trophy.png" alt="Games">
+        <h3>Games</h3>
+        <p>Manage and schedule school games</p>
+    </a>
+    <a href="{% url 'attendence:student_attendance' %}" class="card" id="attendance">
+        <img src="https://img.icons8.com/ios-filled/100/1abc9c/todo-list.png"  alt="Attendance">
+        <h3>Attendance</h3>
+        <p>Track student attendance records</p>
+    </a>
+    <a href="{% url 'user:login' %}" class="card" id="user">
+        <img src="https://img.icons8.com/ios-filled/100/1abc9c/user.png" alt="User">
+        <h3>User</h3>
+        <p>Manage user accounts and profiles</p>
+    </a>
+    <a href="{% url 'student_parent:Student' %}" class="card" id="student">
+        <img src="https://img.icons8.com/ios-filled/100/1abc9c/student-male.png"  alt="Student">
+        <h3>Student</h3>
+        <p>View and manage student details</p>
+    </a>
+    <a href="{% url 'Fee:fees' %}" class="card" id="payment">
+        <img src="https://img.icons8.com/ios-filled/100/1abc9c/money.png"  alt="Payment">
+        <h3>Payment</h3>
+        <p>Manage payment records and dues</p>
+    </a>
+    <a href="{% url 'event:event' %}" class="card" id="events">
+        <img src="https://img.icons8.com/ios-filled/100/1abc9c/calendar.png"  alt="Events">
+        <h3>Events</h3>
+        <p>View and manage school events</p>
+    </a>
+</div>
+
+<footer>
+    <p>School Management System &copy; 2024 Design and Developed by Omar Bakr</p>
+</footer>
+
+</body>
+</html>
+
+
